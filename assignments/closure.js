@@ -66,10 +66,12 @@ const counterFactory = () => {
   let count = 0;
   return {
     increment: function() { 
-      return count + 1;
+      count += 1;
+      return count;
     }, 
     decrement: function() {
-      return count - 1;
+      count -= 1;
+      return count;
     }
   };
 };
@@ -79,3 +81,9 @@ console.log(myCounterFactory);
 console.log(myCounterFactory.increment());  
 console.log(myCounterFactory.increment());
 console.log(myCounterFactory.increment());
+console.log(myCounterFactory.increment());
+console.log(myCounterFactory.decrement());
+console.log(myCounterFactory.decrement());
+console.log(myCounterFactory.decrement());
+console.log(myCounterFactory.decrement());
+console.log(myCounterFactory.decrement());
